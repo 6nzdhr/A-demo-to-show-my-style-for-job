@@ -14,16 +14,18 @@ using namespace std;
 
 int main() {
 
-    std::cout << " 一款模拟大富翁逻辑的小demo, 主要是展示一下代码风格" << std::endl;
-    std::cout << "输入想要模拟的玩家人数(输入最好大于1,为1会导致bug不过我还是允许你输入1方便你测试)";
+    // std::cout << " 一款模拟大富翁逻辑的小demo, 主要是展示一下代码风格" << std::endl;
+    std::cout << " An introductory demo simulating the logic of Monopoly, mainly to showcase the coding style." << std::endl;
+    // std::cout << "输入想要模拟的玩家人数(输入最好大于1,为1会导致bug不过我还是允许你输入1方便你测试)";
+    std::cout << "Enter the number of players you want to simulate (it's best to input a number greater than 1, as entering 1 may cause a bug, but I still allow you to enter 1 for testing purposes).";
     int num = -1;
     while (num < 1) {
         num = utility::input_num();
         std::cout << "大于1";
     }
 
-
     // std::setlocale(LC_ALL, "");//乱码问题 就这样吧在linux上wcout cout 不能混用不然会爆炸,当我发现乱码问题时已经来不及了,凑合看吧
+
 
     auto game = make_shared<Game>(num);
     game->render();
