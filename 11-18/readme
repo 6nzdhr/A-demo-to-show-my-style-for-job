@@ -1,0 +1,50 @@
+一款展示个人代码风格的小demo,也算是智能指针和接口设计(多态继承)的初次体验
+耗时 7 天, 开发时间约50h, 设计思路来源于 《大富翁游宝岛》。
+代码中注释大部分是 一些感想,很可能已经过时(不好的习惯)
+网络和图形部分以后再说
+
+
+为了方便(减少切换文件的次数) 大量使用内联 
+
+valgrind --leak-check=full ./my_program 
+==159916== 
+==159916== HEAP SUMMARY:
+==159916==     in use at exit: 1,344 bytes in 23 blocks
+==159916==   total heap usage: 153 allocs, 130 frees, 100,154 bytes allocated
+==159916== 
+==159916== LEAK SUMMARY:
+==159916==    definitely lost: 0 bytes in 0 blocks
+==159916==    indirectly lost: 0 bytes in 0 blocks
+==159916==      possibly lost: 0 bytes in 0 blocks
+==159916==    still reachable: 1,344 bytes in 23 blocks
+==159916==         suppressed: 0 bytes in 0 blocks
+==159916== Reachable blocks (those to which a pointer was found) are not shown.
+==159916== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==159916== 
+==159916== For lists of detected and suppressed errors, rerun with: -s
+==159916== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+设计复杂的内存分配
+
+
+============================waring开发随笔=====================
+尽可能的小而优雅,最重要的是有一定的扩展性. -11.18
+
+过于宏大的设计,很显然我已经没有开发热情了,就这样吧. -11.21
+
+作为一个小demo,单纯展示一下代码风格.
+
+全部的内联是为了开发速度,如果想要扩展,还是要把耦合的部分分离。后期的复杂耦合基本都分离了
+
+设计弊端逐渐体现,维护需要重新设计,项目决定废弃,但收获很多经验.-11.21 
+此时的程序已经不由自己决定了。
+
+做事要有始有终,好的架构自然可以支撑复杂的交互,全都给我我高内聚 -11.22
+今天把道具商店做出来.
+
+不想做了,一次性道具展示就够了 -11.23
+今天我想差不多可以结束了,最后以添加财神穷神之类的作为结尾,这意味这我的player将被
+
+没有图形界面眼睛快花了,就剩下Token了
+
+差不多了不写了 -11.23
